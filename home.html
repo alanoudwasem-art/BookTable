@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookTable - Home</title>
+    <link rel="stylesheet" href="home_style.css">
+</head>
+<body>
+    <div class="home-container">
+        
+        <div class="search-section">
+            <input type="text" placeholder="Search for a restaurant or cuisine..." class="search-input">
+        </div>
+
+        <div class="categories-section">
+            <div class="category-btn active" id="btn-res" onclick="filterItems('restaurant')">
+                <span class="icon">🍽️</span> Restaurants
+            </div>
+            <div class="category-btn" id="btn-cafe" onclick="filterItems('cafe')">
+                <span class="icon">☕</span> Cafe
+            </div>
+        </div>
+
+        <div class="restaurants-list" id="main-list">
+            
+            <div class="restaurant-card filter-item restaurant" onclick="window.location.href='meraki.html'" style="cursor: pointer;">
+                <div class="image-wrapper">
+                    <img src="https://bsf.sa/ContentFiles/11752Image.PNG" alt="Meraki Riyadh" class="restaurant-img">
+                </div>
+                <div class="info-wrapper">
+                    <div class="top-row">
+                        <h3>Meraki Riyadh</h3>
+                        <span class="rating">4.8</span>
+                    </div>
+                    <div class="details-row">Greek Fine Dining • Al Faisaliah</div>
+                    <div class="status-row">Tables available</div>
+                </div>
+            </div>
+
+            <div class="restaurant-card filter-item restaurant" onclick="window.location.href='beefbar.html'" style="cursor: pointer;">
+                <div class="image-wrapper">
+                    <img src="https://www.alrajhibank.com.sa/-/media/Project/Arajhi-Offers/Offers/2024/New-Offers-Section4/web-Banners-logos-99.jpg?h=640&iar=0&w=1920" alt="Beefbar Riyadh" class="restaurant-img">
+                </div>
+                <div class="info-wrapper">
+                    <div class="top-row">
+                        <h3>Beefbar Riyadh</h3>
+                        <span class="rating">4.9</span>
+                    </div>
+                    <div class="details-row">Luxury Steakhouse • Sulimaniyah</div>
+                    <div class="status-row">Tables available</div>
+                </div>
+            </div>
+
+            <div class="restaurant-card filter-item cafe" onclick="window.location.href='draft.html'" style="display: none; cursor: pointer;">
+                <div class="image-wrapper">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/64/f0/d0/64f0d03c-e587-4a2b-7c29-730dee2936c4/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/512x512bb.jpg" alt="Draft Cafe" class="restaurant-img">
+                </div>
+                <div class="info-wrapper">
+                    <div class="top-row">
+                        <h3>Draft Cafe</h3>
+                        <span class="rating">4.5</span>
+                    </div>
+                    <div class="details-row">Specialty Coffee • Oud Square</div>
+                    <div class="status-row">Tables available</div>
+                </div>
+            </div>
+
+            <div class="restaurant-card filter-item cafe" onclick="window.location.href='elixir.html'" style="display: none; cursor: pointer;">
+                <div class="image-wrapper">
+                    <img src="https://cdn.shopify.com/s/files/1/0697/2185/t/38/assets/logo.png?v=49165306244929029441617084969" alt="Elixir Bunn" class="restaurant-img">
+                </div>
+                <div class="info-wrapper">
+                    <div class="top-row">
+                        <h3>Elixir Bunn</h3>
+                        <span class="rating">4.7</span>
+                    </div>
+                    <div class="details-row">Premium Coffee • Al Nakheel</div>
+                    <div class="status-row">Tables available</div>
+                </div>
+            </div>
+            
+        </div>
+
+        <nav class="bottom-nav">
+            <div class="nav-item active"><span class="icon">🏠</span> Home</div>
+            <div class="nav-item"><span class="icon">📅</span> Bookings</div>
+            <div class="nav-item"><span class="icon">👤</span> Account</div>
+        </nav>
+
+    </div>
+
+    <script>
+        function filterItems(category) {
+          
+            document.getElementById('btn-res').classList.remove('active');
+            document.getElementById('btn-cafe').classList.remove('active');
+            
+            if(category === 'restaurant') {
+                document.getElementById('btn-res').classList.add('active');
+            } else {
+                document.getElementById('btn-cafe').classList.add('active');
+            }
+
+            
+            const items = document.getElementsByClassName('filter-item');
+            for (let item of items) {
+                if (item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+</html>

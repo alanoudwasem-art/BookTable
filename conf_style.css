@@ -1,0 +1,97 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    direction: ltr;
+}
+
+.conf-container {
+    text-align: center;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.success-icon {
+    margin-bottom: 30px;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: #f0fdf4; 
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.checkmark {
+    font-size: 50px;
+    color: #4CAF50; 
+    font-weight: bold;
+}
+
+.conf-text h1 {
+    font-size: 26px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.conf-text p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 40px;
+}
+
+.reservation-card {
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.reservation-card h3 {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+.status-tag {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+
+.home-btn {
+    width: 100%;
+    padding: 18px;
+    background-color: #8C5542; 
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.home-btn:hover {
+    background-color: #7A493A;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meraki Restaurant - Details</title>
+    <link rel="stylesheet" href="meraki_style.css">
+</head>
+<body>
+
+    <div class="details-container">
+        <div class="header-nav">
+            <button class="icon-btn back" onclick="window.location.href='home.html'">✕</button>
+        </div>
+
+        <div class="main-image">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTYyMDF8MHwxfHNlYXJjaHwzfHxyZXN0YXVyYW50fGVufDB8fHx8MTc3MzQ2MDI4M3ww&ixlib=rb-4.1.0&q=80&w=1080" alt="Meraki Food">
+        </div>
+
+        <div class="content-section">
+            <h1>Meraki Restaurant</h1>
+            <div class="tags">
+                <span class="category">• Greek Fine Dining</span>
+                <span class="status">Open until 12:00 PM</span>
+            </div>
+            <p class="main-desc">
+                Authentic Greek flavors with a modern twist. Experience the essence of Mediterranean fine dining at Meraki, Al Faisaliah Hotel.
+            </p>
+
+            <div class="location-bar">
+                <span>📍 Al Faisaliah</span>
+            </div>
+
+            <div class="selection-section">
+                <h3>Table Selection</h3>
+                <div class="btn-group">
+                    <button class="select-btn active" onclick="showDesc('main', this)">Main Dining</button>
+                    <button class="select-btn" onclick="showDesc('window', this)">Window Seating</button>
+                    <button class="select-btn" onclick="showDesc('vip', this)">VIP & Private Dining</button>
+                </div>
+                
+                <p id="table-description" class="info-text">
+                    Immerse yourself in the heart of the restaurant, surrounded by elegant Greek-inspired decor and a lively ambiance.
+                </p>
+            </div>
+
+            <div class="policy-section">
+                <h3>Reservation & Seating Policy</h3>
+                <ul>
+                    <li>🕒 Punctuality: Tables are held for 15 minutes only.</li>
+                    <li>⌛ Dining Time: Each reservation has a 2-hour limit.</li>
+                    <li>👔 Dress Code: Smart Casual is required.</li>
+                    <li>👥 Large Groups: For 8+ guests, please contact us.</li>
+                </ul>
+            </div>
+
+            <button class="main-booking-btn" onclick="window.location.href='booking.html'">
+                Booking
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function showDesc(type, btn) {
+            const descElement = document.getElementById('table-description');
+            const buttons = document.querySelectorAll('.select-btn');
+
+            // تغيير حالة الزر النشط
+            buttons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            // تغيير النص بناءً على الصور اللي ارسلتيها
+            if (type === 'main') {
+                descElement.innerText = "Immerse yourself in the heart of the restaurant, surrounded by elegant Greek-inspired decor and a lively ambiance.";
+            } else if (type === 'window') {
+                descElement.innerText = "Enjoy a more intimate dining experience with partial views of the city's skyline.";
+            } else if (type === 'vip') {
+                descElement.innerText = "Specially curated tables offering enhanced privacy and extra space, perfect for business meetings or exclusive large family gatherings.";
+            }
+        }
+    </script>
+</body>
+</html>

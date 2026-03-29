@@ -1,0 +1,118 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fafafa;
+    direction: ltr; 
+}
+
+.booking-container {
+    width: 100%;
+    background-color: #fff;
+    min-height: 100vh;
+}
+
+.booking-header {
+    display: flex;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.back-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #888;
+    cursor: pointer;
+}
+
+.booking-header h1 {
+    font-size: 18px;
+    margin: 0;
+    font-weight: 600;
+    color: #333;
+}
+
+
+.booking-form {
+    padding: 30px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+
+input[type="date"],
+input[type="time"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    font-size: 15px;
+    color: #333;
+    background-color: #fff;
+    box-sizing: border-box; 
+}
+
+
+.input-with-icon {
+    position: relative;
+}
+
+.input-with-icon .icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+    pointer-events: none; 
+}
+
+.input-with-icon input {
+    padding-left: 45px; 
+}
+
+textarea {
+    height: 120px;
+    resize: none; 
+}
+
+
+.main-booking-btn {
+    width: 100%;
+    padding: 18px;
+    background-color: #8C5542; 
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.main-booking-btn:hover:not(.disabled) {
+    background-color: #7A493A; 
+}
+
+.main-booking-btn.disabled {
+    background-color: #d8c4bd; 
+    cursor: not-allowed;
+    opacity: 0.8;
+}

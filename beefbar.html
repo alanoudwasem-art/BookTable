@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beefbar Riyadh - Details</title>
+    <link rel="stylesheet" href="beefbar_style.css">
+</head>
+<body>
+
+    <div class="details-container">
+        <div class="header-nav">
+            <button class="icon-btn back" onclick="window.location.href='home.html'">✕</button>
+            <div class="right-icons">
+            </div>
+        </div>
+
+        <div class="main-image">
+            <img src="https://beefbar.com/wp-content/uploads/2023/02/beefbar-riyadh-inside-2048x1137.jpg" alt="Beefbar">
+        </div>
+
+        <div class="content-section">
+            <h1>Beefbar Riyadh</h1>
+            <div class="tags">
+                <span class="category">• Luxury Steakhouse</span>
+                <span class="status">Open until 12:30 AM</span>
+            </div>
+            
+            <p class="main-desc">
+                Born in Monte-Carlo, Beefbar breaks the traditional codes of rigid steakhouse culture. Experience a glamorous atmosphere and world-class cuts in the heart of Sulimaniyah.
+            </p>
+
+            <div class="location-bar">
+                <span>📍 Sulimaniyah, Riyadh</span>
+            </div>
+
+            <div class="selection-section">
+                <h3>Table Selection</h3>
+                <div class="btn-group">
+                    <button class="select-btn active" onclick="showBeefDesc('indoor', this)">Indoor Dining</button>
+                    <button class="select-btn" onclick="showBeefDesc('outdoor', this)">Outdoor Seating</button>
+                    <button class="select-btn" onclick="showBeefDesc('terrace', this)">Private Terrace</button>
+                </div>
+                
+                <p id="beef-description" class="info-text">
+                    Experience our sophisticated main hall, featuring opulent golden accents and plush seating for a truly glamorous night.
+                </p>
+            </div>
+
+            <div class="policy-section">
+                <h3>Reservation & Seating Policy</h3>
+                <ul>
+                    <li>🕒 Punctuality: Tables are held for 15 minutes only.</li>
+                    <li>⌛ Dining Time: Each reservation has a 2-hour limit.</li>
+                    <li>👔 Dress Code: Smart Casual is required.</li>
+                    <li>👥 Large Groups: For 8+ guests, please contact us.</li>
+                </ul>
+            </div>
+
+            <button class="main-booking-btn" onclick="window.location.href='booking.html'">
+                Booking
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function showBeefDesc(type, btn) {
+            const descElement = document.getElementById('beef-description');
+            const buttons = document.querySelectorAll('.select-btn');
+            buttons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+          
+            if (type === 'indoor') {
+                descElement.innerText = "Experience our sophisticated main hall, featuring opulent golden accents and plush seating for a truly glamorous night.";
+            } else if (type === 'outdoor') {
+                descElement.innerText = "Enjoy the vibrant Riyadh breeze in our stylish outdoor area, perfect for social gatherings and signature cocktails.";
+            } else if (type === 'terrace') {
+                descElement.innerText = "An exclusive, high-end private terrace offering maximum seclusion for intimate celebrations or VIP business dinners.";
+            }
+        }
+    </script>
+</body>
+</html>

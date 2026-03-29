@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draft Cafe - Details</title>
+    <link rel="stylesheet" href="draft_style.css">
+</head>
+<body>
+
+    <div class="details-container">
+        <div class="header-nav">
+            <button class="icon-btn back" onclick="window.location.href='home.html'">✕</button>
+            <div class="right-icons">
+            </div>
+        </div>
+
+        <div class="main-image">
+            <img src="https://images.squarespace-cdn.com/content/v1/6307181a15629175388f7e20/4dcbaa8a-488c-4c96-87d7-1c1f5391778d/par+avenue+branch+draft.jpg" alt="Draft Cafe">
+        </div>
+
+        <div class="content-section">
+            <h1>DRAFT CAFE</h1>
+            <div class="tags">
+                <span class="category">• Specialized coffee</span>
+                <span class="status">Open until 12:00 PM</span>
+            </div>
+            
+            <p class="main-desc">
+                A unique destination that combines passion for coffee with creativity. Draft Cafe is designed to be an inspiring hub for designers, thinkers, and coffee enthusiasts alike.
+            </p>
+
+            <div class="location-bar">
+                <span>📍 As-Sulimaniyah</span>
+            </div>
+
+            <div class="selection-section">
+                <h3>Table Selection</h3>
+                <div class="btn-group">
+                    <button class="select-btn active" onclick="showDraftDesc('main', this)">Main Hall</button>
+                    <button class="select-btn" onclick="showDraftDesc('creative', this)">Creative Corner</button>
+                    <button class="select-btn" onclick="showDraftDesc('outdoor', this)">Outdoor Area</button>
+                </div>
+                
+                <p id="draft-description" class="info-text">
+                    Experience the vibrant energy of our main hall, where the aroma of fresh coffee meets modern industrial design.
+                </p>
+            </div>
+
+            <div class="policy-section">
+                <h3>Reservation & Seating Policy</h3>
+                <ul>
+                    <li>🎨 Creative Space: Our creative corners are priority-seated for individuals working on projects or sketches.</li>
+                    <li>⌛ Fair Use: During peak hours, we kindly ask guests to limit their stay to 2 hours to allow others to enjoy the space.</li>
+                    <li>🔇 Noise Level: Please keep conversations at a respectful volume to maintain a productive environment for everyone.</li>
+                    <li>🕒 Grace Period: Reservations are held for 15 minutes. Please notify us if you're running late.</li>
+                </ul>
+            </div>
+
+            <button class="main-booking-btn" onclick="window.location.href='booking.html'">
+                Booking
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function showDraftDesc(type, btn) {
+            const descElement = document.getElementById('draft-description');
+            const buttons = document.querySelectorAll('.select-btn');
+            
+            buttons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+           
+            if (type === 'main') {
+                descElement.innerText = "Experience the vibrant energy of our main hall, where the aroma of fresh coffee meets modern industrial design.";
+            } else if (type === 'creative') {
+                descElement.innerText = "A specially curated space for inspiration, equipped with comfortable seating and a quiet atmosphere for creative work.";
+            } else if (type === 'outdoor') {
+                descElement.innerText = "Enjoy your coffee under the sun or stars in our stylish outdoor seating area, perfect for a breath of fresh air.";
+            }
+        }
+    </script>
+</body>
+</html>

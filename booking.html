@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Details</title>
+    <link rel="stylesheet" href="booking_style.css">
+</head>
+<body>
+
+    <div class="booking-container">
+        <div class="booking-header">
+            <button class="back-btn" onclick="window.history.back()">✕</button>
+            <h1>Booking Details</h1>
+        </div>
+
+        <div class="booking-form">
+            <div class="form-group">
+                <label>Number Of Guests</label>
+                <select id="guests" onchange="checkForm()">
+                    <option value="" disabled selected>Select</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="+8">+8</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Select Date</label>
+                <div class="input-with-icon">
+                    <span class="icon">📅</span>
+                    <input type="date" id="date" onchange="checkForm()">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Select Time</label>
+                <div class="input-with-icon">
+                    <span class="icon">🕒</span>
+                    <input type="time" id="time" onchange="checkForm()">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Special Requests (Optional)</label>
+                <textarea id="requests" placeholder="e.g. Birthday celebration etc...."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Enter your mobile number</label>
+                <input type="tel" id="mobile" placeholder="Mobile number" onkeyup="checkForm()">
+            </div>
+
+            <button id="bookingBtn" class="main-booking-btn disabled" disabled onclick="confirmBooking()">
+                Booking
+            </button>
+        </div>
+    </div>
+
+    <script>
+        
+        function checkForm() {
+            const guests = document.getElementById('guests').value;
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+            const mobile = document.getElementById('mobile').value;
+            const btn = document.getElementById('bookingBtn');
+
+            
+            if (guests && date && time && mobile) {
+                btn.disabled = false; 
+                btn.classList.remove('disabled'); 
+            } else {
+                btn.disabled = true; 
+                btn.classList.add('disabled'); 
+            }
+        }
+
+        
+        function confirmBooking() {
+          
+            window.location.href = 'confirmation.html'; 
+        }
+
+       
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fbfbfb;
+    padding-bottom: 90px;
+    direction: ltr;
+}
+
+.home-container {
+    padding: 20px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 25px;
+    border: 1px solid #eee;
+    margin-bottom: 25px;
+    box-sizing: border-box;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+}
+
+.categories-section {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.category-btn {
+    flex: 1;
+    padding: 14px;
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+    color: #555;
+}
+
+.category-btn.active {
+    background: #8C5542; 
+    color: #fff;
+    border-color: #8C5542;
+}
+
+.restaurant-card {
+    background: #fff;
+    border-radius: 20px;
+    margin-bottom: 35px; 
+    overflow: hidden;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.restaurant-card:active {
+    transform: scale(0.98); 
+}
+
+.image-wrapper { 
+    width: 100%; 
+    height: 250px; 
+    background: #fff; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.restaurant-img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: contain; 
+    padding: 20px; 
+}
+
+.info-wrapper { 
+    padding: 20px; 
+    border-top: 1px solid #fafafa;
+}
+
+.top-row { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+h3 { 
+    margin: 0; 
+    font-size: 20px; 
+    color: #333;
+}
+
+.rating { 
+    background: #f8f8f8; 
+    padding: 5px 12px; 
+    border-radius: 15px; 
+    font-size: 14px; 
+    font-weight: bold;
+}
+
+.details-row { 
+    font-size: 15px; 
+    color: #888; 
+    margin-bottom: 12px;
+}
+
+.status-row { 
+    font-size: 14px; 
+    color: #4CAF50; 
+    font-weight: 600; 
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0; left: 0; width: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: space-around;
+    padding: 18px 0;
+    border-top: 1px solid #eee;
+    z-index: 100;
+}
+
+.nav-item { color: #bbb; font-size: 12px; text-align: center; }
+.nav-item.active { color: #8C5542; font-weight: bold; }

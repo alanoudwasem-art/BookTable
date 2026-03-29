@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elixir Bunn - Details</title>
+    <link rel="stylesheet" href="elixir_style.css">
+</head>
+<body>
+
+    <div class="details-container">
+        <div class="header-nav">
+            <button class="icon-btn back" onclick="window.location.href='home.html'">✕</button>
+            <div class="right-icons">
+            </div>
+        </div>
+
+        <div class="main-image">
+            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/cb4d7c23904935.5632b2fe27065.png" alt="Elixir Bunn">
+        </div>
+
+        <div class="content-section">
+            <h1>ELIXIR BUNN</h1>
+            <div class="tags">
+                <span class="category">• Specialized coffee</span>
+                <span class="status">Open until 12:00 PM</span>
+            </div>
+            
+            <p class="main-desc">
+                A modern and peaceful space dedicated to specialty coffee lovers. Whether you're here to focus on work or enjoy a premium brew, Elixir Bunn provides the perfect atmosphere for both productivity and relaxation
+            </p>
+
+            <div class="location-bar">
+                <span>📍 Al-Nakheel</span>
+            </div>
+
+            <div class="selection-section">
+                <h3>Table Selection</h3>
+                <div class="btn-group">
+                    <button class="select-btn active" onclick="showElixirDesc('indoor', this)">Indoor Seating</button>
+                    <button class="select-btn" onclick="showElixirDesc('study', this)">Study & Work Area</button>
+                    <button class="select-btn" onclick="showElixirDesc('terrace', this)">Outdoor Terrace</button>
+                </div>
+                
+                <p id="elixir-description" class="info-text">
+                    Relax in our comfortable indoor area, perfect for enjoying your favorite specialty coffee in a cozy and modern setting.
+                </p>
+            </div>
+
+            <div class="policy-section">
+                <h3>Reservation & Seating Policy</h3>
+                <ul>
+                    <li>💻 Stay & Work: Guests in the study area can enjoy their spot for up to 3 hours during peak times.</li>
+                    <li>☕ Order Policy: A minimum of one drink or snack per person is required for table bookings.</li>
+                    <li>👔 Dress Code: A relaxed and casual attire is always welcome in our cafe.</li>
+                    <li>🕒 Grace Period: Your table will be held for 15 minutes, after which the reservation may be released.</li>
+                </ul>
+            </div>
+
+            <button class="main-booking-btn" onclick="window.location.href='booking.html'">
+                Booking
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function showElixirDesc(type, btn) {
+            const descElement = document.getElementById('elixir-description');
+            const buttons = document.querySelectorAll('.select-btn');
+            
+         
+            buttons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+           
+            if (type === 'indoor') {
+                
+                descElement.innerText = "Relax in our comfortable indoor area, perfect for enjoying your favorite specialty coffee in a cozy and modern setting.";
+            } else if (type === 'study') {
+               
+                descElement.innerText = "A quiet and dedicated space designed for productivity, featuring high-speed Wi-Fi and a calm environment perfect for focusing.";
+            } else if (type === 'terrace') {
+               
+                descElement.innerText = "Enjoy your coffee in the fresh air on our outdoor terrace, offering a great view and a refreshing vibe.";
+            }
+        }
+    </script>
+</body>
+</html>
