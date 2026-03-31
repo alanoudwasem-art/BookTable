@@ -65,11 +65,9 @@
             const descElement = document.getElementById('table-description');
             const buttons = document.querySelectorAll('.select-btn');
 
-            // تغيير حالة الزر النشط
             buttons.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
 
-            // تغيير النص بناءً على الصور اللي ارسلتيها
             if (type === 'main') {
                 descElement.innerText = "Immerse yourself in the heart of the restaurant, surrounded by elegant Greek-inspired decor and a lively ambiance.";
             } else if (type === 'window') {
