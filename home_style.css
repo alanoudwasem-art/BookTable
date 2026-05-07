@@ -50,7 +50,7 @@ body, html {
 }
 
 .restaurant-card {
-    background: #fff;
+    background: #555555;
     border-radius: 20px;
     margin-bottom: 35px; 
     overflow: hidden;
@@ -120,7 +120,7 @@ h3 {
 
 .site-footer {
     background-color: #f4f4f4; 
-    color: #333;
+    color: #555555;
     padding: 30px 20px;
     text-align: center;
     width: 100%;
