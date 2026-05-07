@@ -115,16 +115,26 @@ h3 {
     font-weight: 600; 
 }
 
-.bottom-nav {
-    position: fixed;
-    bottom: 0; left: 0; width: 100%;
-    background: #fff;
-    display: flex;
-    justify-content: space-around;
-    padding: 18px 0;
-    border-top: 1px solid #eee;
-    z-index: 100;
+.site-footer {
+    background-color: #8C5542;
+    color: white;
+    padding: 40px 20px; 
+    text-align: center;
+    width: 100%;
+    margin-top: 50px; 
 }
+
+.footer-links a {
+    color: #bbb;
+    text-decoration: none;
+    margin: 0 15px; 
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: white; 
+}
+
 
 .nav-item { color: #bbb; font-size: 12px; text-align: center; }
 .nav-item.active { color: #8C5542; font-weight: bold; }
