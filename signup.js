@@ -33,7 +33,9 @@ document.getElementById('continueBtn').onclick = function(e) {
         }
     });
 
-    if (isValid) {
-        window.location.href = "terms.html"; [span_6](start_span)//[span_6](end_span)
-    }
+   if (isValid) {
+    localStorage.setItem('isLoggedIn', 'true');
+    
+    window.location.href = "booking.html";
+}
 };
