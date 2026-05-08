@@ -1,4 +1,4 @@
-// وظائف إظهار وإخفاء الخطأ
+// 1. وظيفة إظهار الخطأ مع نص متغير
 function showError(fieldId, errorId, message) {
     document.getElementById(fieldId).classList.add('input-error');
     const errorEl = document.getElementById(errorId);
@@ -6,63 +6,74 @@ function showError(fieldId, errorId, message) {
     errorEl.innerHTML = `<span class="error-circle">!</span>${message}`;
 }
 
+// 2. وظيفة إخفاء الخطأ
 function hideError(fieldId, errorId) {
     document.getElementById(fieldId).classList.remove('input-error');
     document.getElementById(errorId).style.display = 'none';
 }
 
-// التحقق من الإيميل
+// 3. دالة فحص صيغة الإيميل
 function validateEmail(email) {
-    [span_3](start_span)const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;[span_3](end_span)
+    const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
     return pattern.test(email);
 }
 
-[span_4](start_span)// التنبيهات الفورية (Dynamic Validation)[span_4](end_span)
-document.getElementById('fullName').addEventListener('blur', function() {
-    this.value.trim() === "" ? showError('fullName', 'nameError', 'Name is required') : hideError('fullName', 'nameError');
-});
-
-document.getElementById('phoneInput').addEventListener('blur', function() {
-    const val = this.value.trim();
-    if (val === "") showError('phoneInput', 'phoneError', 'Required');
-    else if (!/^\d+$/.test(val)) showError('phoneInput', 'phoneError', 'Numbers only');
-    else if (val.length < 9) showError('phoneInput', 'phoneError', 'Min 9 digits');
-    else hideError('phoneInput', 'phoneError');
-});
-
-document.getElementById('emailInput').addEventListener('blur', function() {
-    const val = this.value.trim();
-    if (!validateEmail(val)) showError('emailInput', 'emailError', 'Invalid email');
-    else hideError('emailInput', 'emailError');
-});
-
-document.getElementById('passwordInput').addEventListener('blur', function() {
-    this.value.length < 8 ? showError('passwordInput', 'passwordError', 'Min 8 chars') : hideError('passwordInput', 'passwordError');
-});
-
-[span_5](start_span)// التحقق النهائي عند الضغط على الزر[span_5](end_span)
+// 4. التحقق عند الضغط على الزر (المنع النهائي)
 document.getElementById('continueBtn').onclick = function(e) {
-    e.preventDefault();
+    e.preventDefault(); // منع الانتقال التلقائي
     let isValid = true;
 
-    const inputs = [
-        { id: 'fullName', err: 'nameError', check: () => document.getElementById('fullName').value.trim() !== "" },
-        { id: 'phoneInput', err: 'phoneError', check: () => /^\d{9,}$/.test(document.getElementById('phoneInput').value.trim()) },
-        { id: 'emailInput', err: 'emailError', check: () => validateEmail(document.getElementById('emailInput').value.trim()) },
-        { id: 'passwordInput', err: 'passwordError', check: () => document.getElementById('passwordInput').value.length >= 8 }
-    ];
+    // --- فحص الاسم الكامل ---
+    const name = document.getElementById('fullName').value.trim();
+    if (name === "") {
+        showError('fullName', 'nameError', 'Full name is required');
+        isValid = false;
+    } else {
+        hideError('fullName', 'nameError');
+    }
 
-    inputs.forEach(input => {
-        if (!input.check()) {
-            showError(input.id, input.err, 'Correct this field');
-            isValid = false;
-        } else {
-            hideError(input.id, input.err);
-        }
-    });
+    // --- فحص رقم الجوال ---
+    const phone = document.getElementById('phoneInput').value.trim();
+    if (phone === "") {
+        showError('phoneInput', 'phoneError', 'Mobile number is required');
+        isValid = false;
+    } else if (!/^\d+$/.test(phone)) {
+        showError('phoneInput', 'phoneError', 'Numbers only please');
+        isValid = false;
+    } else if (phone.length < 9) {
+        showError('phoneInput', 'phoneError', 'Number is too short (min 9)');
+        isValid = false;
+    } else {
+        hideError('phoneInput', 'phoneError');
+    }
 
+    // --- فحص الإيميل ---
+    const email = document.getElementById('emailInput').value.trim();
+    if (email === "") {
+        showError('emailInput', 'emailError', 'Email address is required');
+        isValid = false;
+    } else if (!validateEmail(email)) {
+        showError('emailInput', 'emailError', 'Please enter a valid email (e.g. name@test.com)');
+        isValid = false;
+    } else {
+        hideError('emailInput', 'emailError');
+    }
+
+    // --- فحص الباسورد ---
+    const pass = document.getElementById('passwordInput').value;
+    if (pass === "") {
+        showError('passwordInput', 'passwordError', 'Password is required');
+        isValid = false;
+    } else if (pass.length < 8) {
+        showError('passwordInput', 'passwordError', 'Password is too short (min 8 characters)');
+        isValid = false;
+    } else {
+        hideError('passwordInput', 'passwordError');
+    }
+
+    // --- القرار النهائي ---
     if (isValid) {
-        localStorage.setItem('isLoggedIn', 'true');
-        window.location.href = "booking.html";
+        localStorage.setItem('isLoggedIn', 'true'); // تفعيل الدخول لصفحات المطاعم
+        window.location.href = "booking.html"; // الانتقال فقط عند النجاح
     }
 };
