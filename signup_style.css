@@ -82,3 +82,27 @@ h2 {
     margin-top: 20px;
     line-height: 1.4;
 }
+
+.error-message {
+    color: #d9534f;
+    font-size: 11px;
+    display: none;
+    align-items: center;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    text-align: left; 
+}
+
+.error-circle {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-color: #d9534f;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 14px;
+    font-size: 10px;
+    margin-right: 8px; 
+    font-weight: bold;
+}
