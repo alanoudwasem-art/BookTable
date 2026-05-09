@@ -16,6 +16,8 @@ body, html {
 
 .booking-header {
      width:100%;
+    display:flex;
+    justify-content:flex-start;
     align-items: center;
     padding: 15px 25px;
     background-color: #fff;
