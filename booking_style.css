@@ -22,7 +22,7 @@ body, html {
     padding: 15px 25px;
     background-color: #fff;
     box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-    direction: Itr;
+    text-align:left;
     
 }
 
