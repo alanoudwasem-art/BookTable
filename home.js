@@ -1,6 +1,12 @@
-function selectRestaurant(name) {
-    // حفظ اسم المطعم في الذاكرة
+// أضفنا كلمة url هنا كـ parameter ثانٍ
+function selectRestaurant(name, url) {
+    // حفظ اسم المطعم
     localStorage.setItem('selectedRestaurant', name);
+
+    // هذا السطر هو المسؤول عن الانتقال للصفحة اللي مررتيها في الـ HTML
+    if (url) {
+        window.location.href = url;
+    }
 }
 function filterItems(category) {
           
