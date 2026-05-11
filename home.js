@@ -29,3 +29,23 @@ function filterItems(category) {
                 }
             }
         }
+// تفعيل البحث باستخدام الـ ID
+document.getElementById('main-search').addEventListener('keyup', function(e) {
+    // تحويل النص المكتوب إلى حروف صغيرة لتوحيد البحث
+    let searchTerm = e.target.value.toLowerCase();
+    
+    // الحصول على جميع العناصر التي تحمل كلاس filter-item
+    let items = document.getElementsByClassName('filter-item'); 
+
+    for (let item of items) {
+        // قراءة النص داخل العنصر (اسم المطعم أو الكافيه)
+        let itemName = item.textContent.toLowerCase();
+        
+        // التحقق إذا كان اسم العنصر يحتوي على الكلمة المكتوبة في البحث
+        if (itemName.includes(searchTerm)) {
+            item.style.display = 'block'; // إظهار العنصر
+        } else {
+            item.style.display = 'none';  // إخفاء العنصر
+        }
+    }
+});
