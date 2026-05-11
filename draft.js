@@ -5,7 +5,8 @@ function showDraftDesc(type, btn) {
             buttons.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
 
-           
+           localStorage.setItem('selectedSeating', type); 
+            
             if (type === 'main') {
                 descElement.innerText = "Experience the vibrant energy of our main hall, where the aroma of fresh coffee meets modern industrial design.";
             } else if (type === 'creative') {
