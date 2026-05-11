@@ -18,7 +18,7 @@
                 <a href="mybooking.html" class="nav-item">
                     <span class="icon">📅</span> My booking
                 </a>
-                <a href="profile.html" class="nav-item profile-btn">
+                <a href="Account.html" class="nav-item profile-btn">
                     <span class="icon">👤</span> Account
                 </a>
             </div>
@@ -42,7 +42,7 @@
 
         <div class="restaurants-list" id="main-list">
             
-            <div class="restaurant-card filter-item restaurant" onclick="window.location.href='meraki.html'" style="cursor: pointer;">
+           <div class="restaurant-card filter-item restaurant" onclick="selectRestaurant('Meraki Riyadh', 'meraki.html')" style="cursor: pointer;">
                 <div class="image-wrapper">
                     <img src="https://bsf.sa/ContentFiles/11752Image.PNG" alt="Meraki Riyadh" class="restaurant-img">
                 </div>
@@ -56,7 +56,7 @@
                 </div>
             </div>
 
-            <div class="restaurant-card filter-item restaurant" onclick="window.location.href='beefbar.html'" style="cursor: pointer;">
+           <div class="restaurant-card filter-item restaurant" onclick="selectRestaurant('Beefbar', 'beefbar.html')" style="cursor: pointer;">
                 <div class="image-wrapper">
                     <img src="https://www.alrajhibank.com.sa/-/media/Project/Arajhi-Offers/Offers/2024/New-Offers-Section4/web-Banners-logos-99.jpg?h=640&iar=0&w=1920" alt="Beefbar Riyadh" class="restaurant-img">
                 </div>
@@ -69,8 +69,8 @@
                     <div class="status-row">Tables available</div>
                 </div>
             </div>
-
-            <div class="restaurant-card filter-item cafe" onclick="window.location.href='draft.html'" style="display: none; cursor: pointer;">
+            <div class="restaurant-card filter-item cafe" onclick="selectRestaurant('Draft Cafe', 'draft.html')" style="display: none; cursor: pointer;">  
+            
                 <div class="image-wrapper">
                     <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/64/f0/d0/64f0d03c-e587-4a2b-7c29-730dee2936c4/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/512x512bb.jpg" alt="Draft Cafe" class="restaurant-img">
                 </div>
@@ -83,8 +83,8 @@
                     <div class="status-row">Tables available</div>
                 </div>
             </div>
-
-            <div class="restaurant-card filter-item cafe" onclick="window.location.href='elixir.html'" style="display: none; cursor: pointer;">
+            <div class="restaurant-card filter-item cafe" onclick="selectRestaurant('Elixir Bunn', 'elixir.html')" style="display: none; cursor: pointer;">
+           
                 <div class="image-wrapper">
                     <img src="https://cdn.shopify.com/s/files/1/0697/2185/t/38/assets/logo.png?v=49165306244929029441617084969" alt="Elixir Bunn" class="restaurant-img">
                 </div>
