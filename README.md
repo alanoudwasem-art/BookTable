@@ -4,7 +4,7 @@ BookTable is a web application that helps users find and book tables in restaura
 ## Team Members
 * Alanoud
 * Layan
-* Hala
+
 
 ## Milestone 1 Deliverables
 * UI/UX Prototype
