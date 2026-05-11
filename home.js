@@ -1,9 +1,6 @@
 function selectRestaurant(name) {
     // حفظ اسم المطعم في الذاكرة
     localStorage.setItem('selectedRestaurant', name);
-    
-    // الانتقال لصفحة الحجز
-    window.location.href = "booking.html";
 }
 function filterItems(category) {
           
