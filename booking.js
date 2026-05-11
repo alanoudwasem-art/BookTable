@@ -1,4 +1,14 @@
- // وظيفة إظهار الخطأ
+// أضيفي الكود هنا في بداية الملف
+document.addEventListener('DOMContentLoaded', () => {
+    const selectedRestaurant = localStorage.getItem('selectedRestaurant');
+
+    // إذا دخل الصفحة وما فيه مطعم مختار، يرجعه للهوم فوراً
+    if (!selectedRestaurant) {
+        window.location.href = 'index.html';
+    }
+});
+
+// وظيفة إظهار الخطأ
 function showError(fieldId, message) {
     const field = document.getElementById(fieldId);
     field.classList.add('input-error');
