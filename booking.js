@@ -93,7 +93,8 @@ function confirmBooking() {
     } else { hideError('mobile'); }
 
    if (isValid) {
-        let bookings = JSON.parse(localStorage.getItem('userBookings')) || [];
+       const currentUser = localStorage.getItem('username'); // نجلب اسم المستخدم الحالي
+       let bookings = JSON.parse(localStorage.getItem(`bookings_${currentUser}`)) || [];
 
         const newBooking = {
             restaurantName: localStorage.getItem('selectedRestaurant') || 'Restaurant',
@@ -107,7 +108,7 @@ function confirmBooking() {
         };
 
         bookings.push(newBooking);
-        localStorage.setItem('userBookings', JSON.stringify(bookings));
+        localStorage.setItem(`bookings_${currentUser}`, JSON.stringify(bookings));
 
         alert("Booking Successful!");
         window.location.href = "confirmation.html"; 
