@@ -93,9 +93,28 @@ function confirmBooking() {
     } else { hideError('mobile'); }
 
     // الانتقال لصفحة التأكيد فقط إذا كان كل شيء تمام
-    if (isValid) {
-        // يمكنك هنا حفظ بيانات الحجز في localStorage إذا رغبتِ
-        alert("Booking Successful!"); // اختيارياً
-        window.location.href = "confirmation.html"; // تأكدي من وجود هذه الصفحة
+   if (isValid) {
+        // 1. جلب الحجوزات القديمة أو إنشاء مصفوفة فارغة إذا كان أول حجز
+        let bookings = JSON.parse(localStorage.getItem('userBookings')) || [];
+
+        // 2. تجهيز بيانات الحجز الجديد من الحقول الموجودة في الصفحة
+        const newBooking = {
+            restaurantName: localStorage.getItem('selectedRestaurant') || 'Restaurant',
+            location: 'Riyadh, Saudi Arabia', // يمكنك تغييرها حسب الرغبة
+            date: date.value,
+            time: time.value,
+            guests: guests.value,
+            mobile: mobile.value
+        };
+
+        // 3. إضافة الحجز الجديد للمصفوفة
+        bookings.push(newBooking);
+
+        // 4. حفظ المصفوفة المحدثة في localStorage
+        localStorage.setItem('userBookings', JSON.stringify(bookings));
+
+        // 5. إظهار رسالة النجاح والانتقال (تأكدي أن الصفحة اسمها confirmation.html أو mybooking.html)
+        alert("Booking Successful!");
+        window.location.href = "confirmation.html"; 
     }
 }
