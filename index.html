@@ -10,11 +10,11 @@
 
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo" onclick="window.location.href='home.html'">
+            <div class="logo" onclick="window.location.href='index.html'">
                 <h2>BookTable</h2>
             </div>
             <div class="nav-links">
-                <a href="my-bookings.html" class="nav-item">
+                <a href="mybooking.html" class="nav-item">
                     <span class="icon">📅</span> My booking
                 </a>
                 <a href="profile.html" class="nav-item profile-btn">
@@ -24,7 +24,8 @@
         </div>
     </nav>
 
-    <div class="home-container">
+   <div class="home-container">
+        
         <div class="search-section">
             <input type="text" placeholder="Search for a restaurant or cuisine..." class="search-input">
         </div>
@@ -39,6 +40,7 @@
         </div>
 
         <div class="restaurants-list" id="main-list">
+            
             <div class="restaurant-card filter-item restaurant" onclick="window.location.href='meraki.html'" style="cursor: pointer;">
                 <div class="image-wrapper">
                     <img src="https://bsf.sa/ContentFiles/11752Image.PNG" alt="Meraki Riyadh" class="restaurant-img">
@@ -66,10 +68,76 @@
                     <div class="status-row">Tables available</div>
                 </div>
             </div>
+
+            <div class="restaurant-card filter-item cafe" onclick="window.location.href='draft.html'" style="display: none; cursor: pointer;">
+                <div class="image-wrapper">
+                    <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/64/f0/d0/64f0d03c-e587-4a2b-7c29-730dee2936c4/AppIcon-0-0-1x_U007emarketing-0-0-0-7-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/512x512bb.jpg" alt="Draft Cafe" class="restaurant-img">
+                </div>
+                <div class="info-wrapper">
+                    <div class="top-row">
+                        <h3>Draft Cafe</h3>
+                        <span class="rating">4.5</span>
+                    </div>
+                    <div class="details-row">Specialty Coffee • Oud Square</div>
+                    <div class="status-row">Tables available</div>
+                </div>
             </div>
 
-        <footer class="footer">
-            </footer>
+            <div class="restaurant-card filter-item cafe" onclick="window.location.href='elixir.html'" style="display: none; cursor: pointer;">
+                <div class="image-wrapper">
+                    <img src="https://cdn.shopify.com/s/files/1/0697/2185/t/38/assets/logo.png?v=49165306244929029441617084969" alt="Elixir Bunn" class="restaurant-img">
+                </div>
+                <div class="info-wrapper">
+                    <div class="top-row">
+                        <h3>Elixir Bunn</h3>
+                        <span class="rating">4.7</span>
+                    </div>
+                    <div class="details-row">Premium Coffee • Al Nakheel</div>
+                    <div class="status-row">Tables available</div>
+                </div>
+            </div>
+            
+        </div>
+
+     <footer class="footer">
+    <div class="footer-container">
+        <!-- Brand Section -->
+        <div class="footer-column">
+            <h3>BookTable</h3>
+            <p>Your ultimate platform for seamless restaurant table reservations without the wait.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-column">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+            </ul>
+        </div>
+
+       
+        <div class="footer-column">
+            <h4>Support</h4>
+            <ul>
+                <li><a href="terms.html">Privacy Policy</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+
+       
+        <div class="footer-column">
+            <h4>Follow Us</h4>
+            <div class="social-links">
+                <a href="https://www.instagram.com/">Instagram</a> | 
+                <a href="https://x.com/">X</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2026 BookTable. All rights reserved.</p>
+    </div>
+</footer>
 
     <script src="home.js"></script>
 </body>
