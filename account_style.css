@@ -1,0 +1,61 @@
+.account-container {
+    max-width: 600px;
+    margin: 80px auto;
+    padding: 30px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.profile-card, .auth-card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.user-avatar {
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+
+.info-group {
+    text-align: left;
+    margin: 20px 0;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.info-group p {
+    margin: 10px 0;
+    color: #555;
+}
+
+.info-group strong {
+    color: #8B4513;
+}
+
+.btn-signout {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.btn-signin {
+    background: #8B4513;
+    color: white;
+    text-decoration: none;
+    padding: 15px 40px;
+    border-radius: 30px;
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.btn-signin:hover {
+    background: #5D2E0A;
+}
