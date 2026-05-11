@@ -72,8 +72,16 @@ document.getElementById('continueBtn').onclick = function(e) {
     }
 
     // --- القرار النهائي ---
-    if (isValid) {
-        localStorage.setItem('isLoggedIn', 'true'); // تفعيل الدخول لصفحات المطاعم
-        window.location.href = "booking.html"; // الانتقال فقط عند النجاح
+   // --- القرار النهائي ---
+if (isValid) {
+    localStorage.setItem('username', name); // أضفت هذا السطر لحفظ اسم المستخدم
+    localStorage.setItem('isLoggedIn', 'true'); // تفعيل حالة الدخول
+
+    // التوجيه الذكي
+    if (document.referrer.includes('mybooking.html')) {
+        window.location.href = "index.html"; // يرجعه للهوم إذا كان جاي من صفحة الحجوزات
+    } else {
+        window.location.href = "index.html"; // التوجيه الافتراضي
     }
+}
 };
