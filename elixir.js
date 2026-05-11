@@ -6,7 +6,8 @@
             buttons.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
 
-           
+           localStorage.setItem('selectedSeating', type); 
+  
             if (type === 'indoor') {
                 
                 descElement.innerText = "Relax in our comfortable indoor area, perfect for enjoying your favorite specialty coffee in a cozy and modern setting.";
