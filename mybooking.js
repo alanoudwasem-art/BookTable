@@ -3,7 +3,7 @@
             
             // 1. Check Login Status (Check if 'username' exists in localStorage)
             const user = localStorage.getItem('username'); 
-            const bookings = JSON.parse(localStorage.getItem('userBookings')) || [];
+            const bookings = JSON.parse(localStorage.getItem(`bookings_${user}`)) || [];
 
             if (!user) {
                 // State: Not Logged In
