@@ -21,7 +21,7 @@
                         <span style="font-size: 50px;">🍽️</span>
                         <h2>No Active Bookings</h2>
                         <p>It looks like you haven't booked a table yet. Discover the best restaurants in the city!</p>
-                        <a href="home.html" class="btn-action">Browse Restaurants</a>
+                        <a href="index.html" class="btn-action">Browse Restaurants</a>
                     </div>`;
             } else {
                 // State: Bookings Exist
