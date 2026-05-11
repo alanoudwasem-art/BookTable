@@ -234,3 +234,27 @@ h3 {
     font-size: 13px;
     color: #999;
 }
+
+/* تنسيق خاص لشاشات الجوال */
+@media (max-width: 600px) {
+    .nav-container {
+        flex-direction: column; /* جعل اللوجو والروابط فوق بعض */
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .nav-links {
+        gap: 10px; /* تقليل المسافة بين الأزرار */
+        justify-content: center;
+        width: 100%;
+    }
+
+    .nav-item {
+        font-size: 12px; /* تصغير حجم الخط للأزرار */
+        gap: 3px;
+    }
+
+    .logo h2 {
+        font-size: 18px; /* تصغير حجم كلمة BookTable */
+    }
+}
