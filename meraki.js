@@ -4,6 +4,8 @@
 
             buttons.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
+    
+            localStorage.setItem('selectedSeating', type); 
 
             if (type === 'main') {
                 descElement.innerText = "Immerse yourself in the heart of the restaurant, surrounded by elegant Greek-inspired decor and a lively ambiance.";
