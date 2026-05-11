@@ -4,6 +4,7 @@
             buttons.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
 
+            localStorage.setItem('selectedSeating', type); 
           
             if (type === 'indoor') {
                 descElement.innerText = "Experience our sophisticated main hall, featuring opulent golden accents and plush seating for a truly glamorous night.";
