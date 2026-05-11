@@ -13,13 +13,7 @@ body, html {
     height: 90vh; 
 }
 
-.back-btn {
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    align-self: flex-start;
-}
+
 
 .content-wrapper {
     margin-top: 40px;
