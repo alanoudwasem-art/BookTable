@@ -1,4 +1,11 @@
- function filterItems(category) {
+function selectRestaurant(name) {
+    // حفظ اسم المطعم في الذاكرة
+    localStorage.setItem('selectedRestaurant', name);
+    
+    // الانتقال لصفحة الحجز
+    window.location.href = "booking.html";
+}
+function filterItems(category) {
           
             document.getElementById('btn-res').classList.remove('active');
             document.getElementById('btn-cafe').classList.remove('active');
