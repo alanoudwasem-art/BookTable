@@ -101,7 +101,7 @@ function confirmBooking() {
             // دمج التاريخ والوقت ليعرضوا بشكل صحيح في صفحة الحجوزات
             time: `${date.value} ${time.value}`, 
             // تأكدي أن الاسم هنا seating ليطابق ملف mybooking.js
-            seating: "Standard Area", 
+           seating: localStorage.getItem('selectedSeating') || 'Standard Area',
             guests: guests.value,
             mobile: mobile.value
         };
