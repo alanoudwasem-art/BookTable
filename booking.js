@@ -36,16 +36,7 @@ function hideError(fieldId) {
 }
 
 
-function checkForm() {
-    const guests = document.getElementById('guests').value;
-    const date = document.getElementById('date').value;
-    const time = document.getElementById('time').value;
-    const mobile = document.getElementById('mobile').value.trim();
-    const btn = document.getElementById('bookingBtn');
 
-    
-   
-}
 
 
 function confirmBooking() {
