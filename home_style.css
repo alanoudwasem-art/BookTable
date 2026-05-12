@@ -167,7 +167,7 @@ h3 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
     border-top: 1px solid #eaeaea;
-    direction: ltr; /* English alignment */
+    direction: ltr; 
 }
 
 .footer-container {
@@ -235,26 +235,26 @@ h3 {
     color: #999;
 }
 
-/* تنسيق خاص لشاشات الجوال */
+
 @media (max-width: 600px) {
     .nav-container {
-        flex-direction: column; /* جعل اللوجو والروابط فوق بعض */
+        flex-direction: column; 
         gap: 10px;
         padding: 10px;
     }
 
     .nav-links {
-        gap: 10px; /* تقليل المسافة بين الأزرار */
+        gap: 10px; 
         justify-content: center;
         width: 100%;
     }
 
     .nav-item {
-        font-size: 12px; /* تصغير حجم الخط للأزرار */
+        font-size: 12px; 
         gap: 3px;
     }
 
     .logo h2 {
-        font-size: 18px; /* تصغير حجم كلمة BookTable */
+        font-size: 18px; 
     }
 }
