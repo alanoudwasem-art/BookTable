@@ -1,4 +1,4 @@
-/* My Bookings Page Custom Styles */
+
 .booking-container {
     max-width: 850px;
     margin: 50px auto;
@@ -21,7 +21,7 @@
 }
 
 .btn-action {
-    background: #8B4513; /* Matching your theme color */
+    background: #8B4513; 
     color: white;
     padding: 12px 35px;
     border-radius: 30px;
@@ -45,7 +45,7 @@
     padding: 25px;
     text-align: left;
     margin-bottom: 25px;
-    border-left: 6px solid #8B4513; /* Brown accent on the left */
+    border-left: 6px solid #8B4513; 
 }
 
 .booking-card h3 {
