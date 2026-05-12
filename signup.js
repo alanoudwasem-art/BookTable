@@ -1,4 +1,4 @@
-// 1. وظيفة إظهار الخطأ مع نص متغير
+
 function showError(fieldId, errorId, message) {
     document.getElementById(fieldId).classList.add('input-error');
     const errorEl = document.getElementById(errorId);
@@ -6,24 +6,24 @@ function showError(fieldId, errorId, message) {
     errorEl.innerHTML = `<span class="error-circle">!</span>${message}`;
 }
 
-// 2. وظيفة إخفاء الخطأ
+
 function hideError(fieldId, errorId) {
     document.getElementById(fieldId).classList.remove('input-error');
     document.getElementById(errorId).style.display = 'none';
 }
 
-// 3. دالة فحص صيغة الإيميل
+
 function validateEmail(email) {
     const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
     return pattern.test(email);
 }
 
-// 4. التحقق عند الضغط على الزر (المنع النهائي)
+
 document.getElementById('continueBtn').onclick = function(e) {
-    e.preventDefault(); // منع الانتقال التلقائي
+    e.preventDefault(); 
     let isValid = true;
 
-    // --- فحص الاسم الكامل ---
+    
     const name = document.getElementById('fullName').value.trim();
     if (name === "") {
         showError('fullName', 'nameError', 'Full name is required');
@@ -32,7 +32,7 @@ document.getElementById('continueBtn').onclick = function(e) {
         hideError('fullName', 'nameError');
     }
 
-    // --- فحص رقم الجوال ---
+    
     const phone = document.getElementById('phoneInput').value.trim();
     if (phone === "") {
         showError('phoneInput', 'phoneError', 'Mobile number is required');
@@ -47,7 +47,7 @@ document.getElementById('continueBtn').onclick = function(e) {
         hideError('phoneInput', 'phoneError');
     }
 
-    // --- فحص الإيميل ---
+    
     const email = document.getElementById('emailInput').value.trim();
     if (email === "") {
         showError('emailInput', 'emailError', 'Email address is required');
@@ -59,7 +59,7 @@ document.getElementById('continueBtn').onclick = function(e) {
         hideError('emailInput', 'emailError');
     }
 
-    // --- فحص الباسورد ---
+    
     const pass = document.getElementById('passwordInput').value;
     if (pass === "") {
         showError('passwordInput', 'passwordError', 'Password is required');
@@ -71,17 +71,17 @@ document.getElementById('continueBtn').onclick = function(e) {
         hideError('passwordInput', 'passwordError');
     }
 
-    // --- القرار النهائي ---
-   // --- القرار النهائي ---
+  
+  
 if (isValid) {
-    localStorage.setItem('username', name); // أضفت هذا السطر لحفظ اسم المستخدم
-    localStorage.setItem('isLoggedIn', 'true'); // تفعيل حالة الدخول
+    localStorage.setItem('username', name); 
+    localStorage.setItem('isLoggedIn', 'true'); 
 
-    // التوجيه الذكي
+    
     if (document.referrer.includes('mybooking.html')) {
-        window.location.href = "index.html"; // يرجعه للهوم إذا كان جاي من صفحة الحجوزات
+        window.location.href = "index.html"; 
     } else {
-        window.location.href = "index.html"; // التوجيه الافتراضي
+        window.location.href = "index.html"; 
     }
 }
 };
