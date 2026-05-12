@@ -44,13 +44,7 @@ function checkForm() {
     const btn = document.getElementById('bookingBtn');
 
     
-    if (guests && date && time && /^\d{9,}$/.test(mobile)) {
-        btn.classList.remove('disabled');
-        btn.disabled = false;
-    } else {
-        btn.classList.add('disabled');
-        btn.disabled = true;
-    }
+   
 }
 
 
