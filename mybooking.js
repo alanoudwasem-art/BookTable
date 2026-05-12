@@ -1,12 +1,12 @@
   document.addEventListener('DOMContentLoaded', () => {
             const contentArea = document.getElementById('content-area');
             
-            // 1. Check Login Status (Check if 'username' exists in localStorage)
+            
             const user = localStorage.getItem('username'); 
             const bookings = JSON.parse(localStorage.getItem(`bookings_${user}`)) || [];
 
             if (!user) {
-                // State: Not Logged In
+                
                 contentArea.innerHTML = `
                     <div class="login-msg">
                         <span style="font-size: 50px;">👤</span>
@@ -15,7 +15,7 @@
                         <a href="signup.html" class="btn-action">Sign In / Register</a>
                     </div>`;
             } else if (bookings.length === 0) {
-                // State: Logged In but No Bookings Found
+                
                 contentArea.innerHTML = `
                     <div class="empty-msg">
                         <span style="font-size: 50px;">🍽️</span>
@@ -24,7 +24,7 @@
                         <a href="index.html" class="btn-action">Browse Restaurants</a>
                     </div>`;
             } else {
-                // State: Bookings Exist
+                
                 let bookingsHTML = '<h2 class="page-title">My Upcoming Reservations</h2>';
                 bookings.forEach(book => {
                     bookingsHTML += `
