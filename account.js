@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     const accountContent = document.getElementById('account-content');
 
-    // التحقق من وجود بيانات المستخدم في التخزين
-    const user = localStorage.getItem('username'); // افترضنا أنك تخزنين الاسم عند التسجيل
+   
+    const user = localStorage.getItem('username'); 
     const email = localStorage.getItem('email') || 'Not provided';
 
     if (user) {
-        // إذا كان مسجل دخول، اعرض معلوماته
+        
         accountContent.innerHTML = `
             <div class="profile-card">
                 <div class="user-avatar">👤</div>
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         `;
     } else {
-        // إذا لم يكن مسجل دخول، اعرض خيار تسجيل الدخول
+        
         accountContent.innerHTML = `
             <div class="auth-card">
                 <div class="user-avatar">🔒</div>
@@ -31,10 +31,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// وظيفة تسجيل الخروج
+
 function signOut() {
     localStorage.removeItem('username');
     localStorage.removeItem('email');
-    // إعادة تحميل الصفحة لتحديث الشكل
+    
     window.location.reload();
 }
